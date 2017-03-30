@@ -2,9 +2,6 @@ FROM jimyryan/docker-ubuntu
 
 MAINTAINER JimyRyan <JimyRyan@gmail.com>
 
-# disable interactive functions
-ONBUILD ENV DEBIAN_FRONTEND noninteractive
-
 # Install Oracle Java JDK 8 from webupd8 repository
 RUN set -eux \
 	&& echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list \
